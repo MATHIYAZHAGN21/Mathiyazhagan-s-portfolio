@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 - Page Not Found | Mathiyazhagan S</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .not-found-container {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+      position: relative;
+      z-index: 2;
+    }
+    .error-code {
+      font-size: 7rem;
+      font-weight: 900;
+      line-height: 1;
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 1rem;
+      letter-spacing: -0.05em;
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-ambient-glow glow-1"></div>
+  <div class="bg-ambient-glow glow-2"></div>
+  <main class="not-found-container">
+    <div class="error-code">404</div>
+    <h1 style="font-size: 2rem; margin-bottom: 0.75rem;">Page Not Found</h1>
+    <p style="max-width: 460px; color: var(--text-secondary); margin-bottom: 2rem;">
+      The page you're looking for doesn't exist or has been moved. Explore Mathiyazhagan's portfolio and projects instead.
+    </p>
+    <a href="index.html" class="btn btn-primary">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+      <span>Back to Portfolio</span>
+    </a>
+  </main>
+</body>
+</html>

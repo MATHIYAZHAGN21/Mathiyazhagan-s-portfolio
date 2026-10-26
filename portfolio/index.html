@@ -1,0 +1,1841 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio of Mathiyazhagan S - Full Stack Developer & Software Engineer (MERN & Java). B.E. Computer Science Graduate (CGPA 8.2), actively seeking full-time Software Engineer and Developer roles. Immediate joiner." />
+  <meta name="keywords" content="Mathiyazhagan S, Full Stack Developer, MERN Stack, React, Node.js, MongoDB, Java, Web Developer Portfolio, Salem, Software Engineer" />
+  <meta name="author" content="Mathiyazhagan S" />
+  
+  <title>Mathiyazhagan S | Full Stack Developer & Software Engineer</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+  <!-- Open Graph & Social Sharing Metadata -->
+  <meta property="og:title" content="Mathiyazhagan S | Full Stack Developer & Software Engineer" />
+  <meta property="og:description" content="Portfolio of Mathiyazhagan S - MERN Stack, Java, and REST API Developer. B.E. Computer Science Graduate (8.2 CGPA), immediate joiner." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://github.com/MATHIYAZHAGN21" />
+  <meta property="og:image" content="profile.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Mathiyazhagan S | Full Stack Developer" />
+  <meta name="twitter:description" content="MERN Stack, Java, and REST API Developer. B.E. Computer Science Graduate (8.2 CGPA)." />
+  <meta name="twitter:image" content="profile.jpg" />
+
+  <!-- Preconnect Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Ambient Glow Effects -->
+  <div class="bg-ambient-glow glow-1"></div>
+  <div class="bg-ambient-glow glow-2"></div>
+
+  <!-- Interactive Particles Canvas -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- ==================== HEADER & NAVBAR ==================== -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#hero" class="nav-logo" aria-label="Mathiyazhagan S Home">
+        <img src="profile.jpg" alt="Mathiyazhagan S" class="nav-avatar-img" />
+        <span>Mathi<span style="color: var(--accent-cyan);">.dev</span></span>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav-menu">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#coding-profiles" class="nav-link">Profiles</a>
+        <a href="#achievements" class="nav-link">Achievements</a>
+        <a href="#education" class="nav-link">Education</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Action Items & Theme Toggle -->
+      <div class="nav-actions">
+        <button id="theme-toggle-btn" class="theme-toggle-btn" aria-label="Toggle theme">
+          <svg id="theme-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+
+        <button class="btn btn-outline btn-sm open-resume-modal" type="button" title="Preview Resume Sheet">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+          Resume
+        </button>
+
+        <a href="#contact" class="btn btn-primary btn-sm">Hire Me</a>
+
+        <button id="hamburger-btn" class="hamburger-btn" aria-label="Toggle mobile menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-nav" id="mobile-nav">
+    <a href="#about" class="nav-link">About</a>
+    <a href="#skills" class="nav-link">Skills</a>
+    <a href="#experience" class="nav-link">Experience</a>
+    <a href="#projects" class="nav-link">Projects</a>
+    <a href="#coding-profiles" class="nav-link">Profiles</a>
+    <a href="#achievements" class="nav-link">Achievements</a>
+    <a href="#education" class="nav-link">Education</a>
+    <a href="#contact" class="nav-link">Contact</a>
+    <div style="display: flex; gap: 0.5rem; margin-top: 0.5rem;">
+      <button class="btn btn-outline trigger-download-resume" type="button" style="flex: 1;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+        Download
+      </button>
+      <button class="btn btn-primary open-resume-modal" type="button" style="flex: 1;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+        Preview
+      </button>
+    </div>
+  </div>
+
+  <main>
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="hero-section" id="hero">
+      <div class="hero-container">
+        <div class="hero-content">
+          <h1 class="hero-name">Mathiyazhagan S</h1>
+          <p class="hero-title">Full Stack Developer &amp; Software Engineer</p>
+          <p class="hero-intro">Passionate MERN Stack intern at Imagecon Academy. Google Student Ambassador. Building modern web apps with React, Node.js, MongoDB, and Java.</p>
+          <div class="hero-cta">
+            <a href="#projects" class="btn btn-primary">Explore My Projects</a>
+            <button class="btn btn-outline trigger-download-resume">Download Resume</button>
+            <button class="btn btn-outline open-resume-modal">Preview Resume</button>
+          </div>
+          <div class="hero-links">
+            <a href="https://github.com/MATHIYAZHAGN21" target="_blank" class="hero-social-link" aria-label="GitHub"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></a>
+            <a href="https://linkedin.com/in/mathiyazhagan-s-419095298" target="_blank" class="hero-social-link" aria-label="LinkedIn"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+            <a href="mailto:smathiyazhaganmathivishnu@gmail.com" class="hero-social-link" aria-label="Email"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <img src="profile.jpg" alt="Mathiyazhagan" class="hero-profile-img" loading="lazy"/>
+        </div>
+      </div>
+    </section>
+    <section class="hero-section" id="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <div class="hero-status-badge">
+              <span class="status-dot"></span>
+              <span>Actively Looking for Jobs • Immediate Joiner • B.E. CSE Graduate</span>
+            </div>
+
+            <h1 class="hero-name">
+              Hi, I'm <span class="gradient-text">Mathiyazhagan S</span>
+            </h1>
+
+            <div class="hero-typing-wrap">
+              <span>I am a</span>
+              <span id="typed-text" class="typed-text"></span>
+              <span class="cursor">|</span>
+            </div>
+
+            <p class="hero-bio">
+              <strong>B.E. Computer Science & Engineering Graduate (CGPA: 8.2)</strong> actively seeking an entry-level <strong>Software Engineer</strong> or <strong>Full Stack Developer</strong> position. Experienced in building production-grade web applications with the <strong>MERN stack</strong>, <strong>Java</strong>, and robust <strong>REST APIs</strong>. Available for immediate full-time employment.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#projects" class="btn btn-primary">
+                <span>Explore Projects</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+              <button class="btn btn-secondary trigger-download-resume" type="button">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                <span>Download Resume</span>
+              </button>
+              <button class="btn btn-outline open-resume-modal" type="button">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                <span>Preview Resume</span>
+              </button>
+            </div>
+
+            <!-- Social Links -->
+            <div class="hero-socials">
+              <a href="https://github.com/MATHIYAZHAGN21" target="_blank" rel="noopener noreferrer" class="hero-social-link" title="GitHub Profile">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+              </a>
+              <a href="https://linkedin.com/in/mathiyazhagan-s-419095298" target="_blank" rel="noopener noreferrer" class="hero-social-link" title="LinkedIn Profile">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+              </a>
+              <a href="mailto:smathiyazhaganmathivishnu@gmail.com" class="hero-social-link" title="Send Email">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              </a>
+              <a href="tel:+919994331036" class="hero-social-link" title="Call Mathiyazhagan">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Hero Visual: Profile Photo & Code Card Showcase -->
+          <div class="hero-visual">
+            <div class="hero-code-card">
+              <div class="code-card-header">
+                <div class="code-dots">
+                  <span class="code-dot dot-red"></span>
+                  <span class="code-dot dot-yellow"></span>
+                  <span class="code-dot dot-green"></span>
+                </div>
+                <!-- Interactive Tabs: Portrait vs Code -->
+                <div class="hero-view-tabs">
+                  <button id="hero-tab-photo-btn" class="hero-tab-btn active" type="button">👤 Portrait</button>
+                  <button id="hero-tab-code-btn" class="hero-tab-btn" type="button">💻 Code Config</button>
+                </div>
+                <div style="font-size: 0.75rem; color: var(--accent-emerald);">● Online</div>
+              </div>
+
+              <!-- View 1: Portrait Photo View -->
+              <div id="hero-photo-view" class="hero-photo-view">
+                <div class="hero-profile-frame">
+                  <img src="profile.jpg" alt="Mathiyazhagan S - Full Stack Developer" class="hero-profile-img" />
+                  <div class="hero-profile-badge">
+                    <span class="status-dot"></span>
+                    <span>Immediate Joiner</span>
+                  </div>
+                </div>
+                <div class="hero-photo-info">
+                  <h4>Mathiyazhagan S</h4>
+                  <p>Full Stack Software Engineer • MERN & Java</p>
+                  <div class="hero-photo-tags">
+                    <span class="hero-photo-tag">B.E. CSE (8.2 CGPA)</span>
+                    <span class="hero-photo-tag">React.js</span>
+                    <span class="hero-photo-tag">Node.js</span>
+                    <span class="hero-photo-tag">MongoDB</span>
+                    <span class="hero-photo-tag">Java</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- View 2: Code Config View -->
+              <div id="hero-code-view" style="display: none;">
+                <pre class="code-card-body"><code><span class="token-keyword">const</span> <span class="token-function">developerProfile</span> = {
+  <span class="token-property">name</span>: <span class="token-string">"Mathiyazhagan S"</span>,
+  <span class="token-property">role</span>: <span class="token-string">"Full Stack Software Engineer"</span>,
+  <span class="token-property">degree</span>: <span class="token-string">"B.E. Computer Science (Completed)"</span>,
+  <span class="token-property">cgpa</span>: <span class="token-number">8.2</span>,
+  <span class="token-property">status</span>: <span class="token-string">"Actively Seeking Full-Time Job"</span>,
+  <span class="token-property">availability</span>: <span class="token-string">"Immediate Joiner"</span>,
+  <span class="token-property">coreStack</span>: [
+    <span class="token-string">"MongoDB"</span>, <span class="token-string">"Express.js"</span>,
+    <span class="token-string">"React.js"</span>, <span class="token-string">"Node.js"</span>,
+    <span class="token-string">"PostgreSQL"</span>, <span class="token-string">"Java"</span>
+  ],
+  <span class="token-property">leadership</span>: <span class="token-string">"Google Student Ambassador"</span>,
+  <span class="token-property">location</span>: <span class="token-string">"Salem, Tamil Nadu, India"</span>,
+  <span class="token-property">openToWork</span>: <span class="token-keyword">true</span>,
+  <span class="token-function">passion</span>: () =&gt; [
+    <span class="token-string">"Scalable Full-Stack Systems"</span>,
+    <span class="token-string">"Clean REST API Design"</span>,
+    <span class="token-string">"High Performance Web Apps"</span>
+  ]
+};</code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Stats Row -->
+        <div class="hero-stats-banner">
+          <div class="stat-item">
+            <span class="stat-number">8.2</span>
+            <span class="stat-label">B.E. CSE CGPA</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">12+</span>
+            <span class="stat-label">GitHub Repositories</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">7+ Mo</span>
+            <span class="stat-label">Internship Experience</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">50+</span>
+            <span class="stat-label">Students Mentored (AI)</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== ABOUT SECTION ==================== -->
+    <section class="section-wrapper" id="about">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+            About Me
+          </div>
+          <h2 class="section-title">Driven by Engineering, <span class="gradient-text">Focused on Solutions</span></h2>
+          <p class="section-subtitle">A blend of solid computer science foundations, full-stack practical mastery, and a drive to build scalable software.</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-text">
+            <p>
+              I am a <strong>Computer Science & Engineering graduate</strong> from <strong>AVS Engineering College, Salem</strong> (CGPA: 8.2), actively seeking an entry-level <strong>Software Engineer</strong> or <strong>Full Stack Developer</strong> position. My expertise spans modern web engineering, object-oriented software design, and scalable database systems.
+            </p>
+            <p>
+              During my 7-month full-stack internship at <span class="highlight-text">Imagecon Academy</span>, I designed, developed, and maintained production-grade web applications using the <strong>MERN stack</strong> (MongoDB, Express.js, React, Node.js), engineering secure RESTful endpoints, implementing JWT authentication, and streamlining client-server data flow.
+            </p>
+            <p>
+              Beyond coding, I actively foster developer growth. As a <span class="highlight-text">Google Student Ambassador</span>, I conducted hands-on Gemini AI awareness sessions for over 50 students and earned Google Developer Badges across core web technologies.
+            </p>
+
+            <!-- 4 Pillars -->
+            <div class="about-pillars">
+              <div class="pillar-card">
+                <div class="pillar-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                </div>
+                <h4 class="pillar-title">Full Stack Mastery</h4>
+                <p class="pillar-desc">Seamlessly connecting intuitive React interfaces with robust Node & Express backends.</p>
+              </div>
+
+              <div class="pillar-card">
+                <div class="pillar-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                </div>
+                <h4 class="pillar-title">Clean API Architecture</h4>
+                <p class="pillar-desc">Designing RESTful APIs with validation, JWT security, and structured normalization.</p>
+              </div>
+
+              <div class="pillar-card">
+                <div class="pillar-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+                </div>
+                <h4 class="pillar-title">Database Reliability</h4>
+                <p class="pillar-desc">Expertise in MongoDB document modeling, PostgreSQL relational schemas, & Prisma ORM.</p>
+              </div>
+
+              <div class="pillar-card">
+                <div class="pillar-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                </div>
+                <h4 class="pillar-title">Team Collaboration</h4>
+                <p class="pillar-desc">Effective GitHub branch workflows, pull requests, and agile task tracking.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Information Card -->
+          <div class="about-info-card">
+            <div class="info-card-header">
+              <img src="profile.jpg" alt="Mathiyazhagan S" class="about-avatar-img" />
+              <div>
+                <h3 style="font-size: 1.25rem;">Mathiyazhagan S</h3>
+                <p style="font-size: 0.85rem; color: var(--accent-cyan);">Full Stack Software Engineer (Immediate Joiner)</p>
+              </div>
+            </div>
+
+            <div class="info-list">
+              <div class="info-item">
+                <div class="info-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                </div>
+                <div>
+                  <span class="info-label">Location</span>
+                  <span class="info-val">Salem, Tamil Nadu, India</span>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <div class="info-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+                </div>
+                <div>
+                  <span class="info-label">Degree</span>
+                  <span class="info-val">B.E. Computer Science (Completed • CGPA: 8.2)</span>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <div class="info-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+                </div>
+                <div>
+                  <span class="info-label">Current Job Status</span>
+                  <span class="info-val" style="color: var(--accent-emerald); font-weight: 700;">Actively Looking for Jobs (Immediate Joiner)</span>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <div class="info-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                </div>
+                <div>
+                  <span class="info-label">Email</span>
+                  <span class="info-val">smathiyazhaganmathivishnu@gmail.com</span>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <div class="info-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                </div>
+                <div>
+                  <span class="info-label">Phone</span>
+                  <span class="info-val">+91 99943 31036</span>
+                </div>
+              </div>
+            </div>
+
+            <div style="margin-top: 1.5rem; text-align: center;">
+              <a href="#contact" class="btn btn-secondary" style="width: 100%;">
+                <span>Contact Mathiyazhagan</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== TECHNICAL SKILLS SECTION ==================== -->
+    <section class="section-wrapper" id="skills" style="background: var(--bg-secondary);">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+            Technical Arsenal
+          </div>
+          <h2 class="section-title">Skills & <span class="gradient-text">Core Competencies</span></h2>
+          <p class="section-subtitle">Proficient in full-stack web engineering, software design paradigms, and modern developer tooling.</p>
+        </div>
+
+        <!-- Live Skill Search Bar -->
+        <div class="skills-controls">
+          <p style="font-size: 0.95rem; color: var(--text-secondary);">
+            Type any skill or technology to quickly filter and highlight:
+          </p>
+          <div class="skill-search-box">
+            <span class="skill-search-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            </span>
+            <input type="text" id="skill-search-input" placeholder="Search: React, MongoDB, Java, API..." />
+          </div>
+        </div>
+
+        <!-- 6 Skill Category Cards -->
+        <div class="skills-category-grid">
+          <!-- 1. Frontend -->
+          <div class="skill-category-card">
+            <div class="category-header">
+              <div class="category-icon-box">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+              </div>
+              <h3 class="category-title">Frontend Development</h3>
+            </div>
+            <div class="skill-pills-list">
+              <span class="skill-pill">React.js</span>
+              <span class="skill-pill">Tailwind CSS</span>
+              <span class="skill-pill">HTML5</span>
+              <span class="skill-pill">CSS3</span>
+              <span class="skill-pill">Bootstrap</span>
+              <span class="skill-pill">Responsive UI</span>
+              <span class="skill-pill">DOM Manipulation</span>
+              <span class="skill-pill">Event Handling</span>
+            </div>
+          </div>
+
+          <!-- 2. Backend & APIs -->
+          <div class="skill-category-card">
+            <div class="category-header">
+              <div class="category-icon-box">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+              </div>
+              <h3 class="category-title">Backend & APIs</h3>
+            </div>
+            <div class="skill-pills-list">
+              <span class="skill-pill">Node.js</span>
+              <span class="skill-pill">Express.js</span>
+              <span class="skill-pill">RESTful APIs</span>
+              <span class="skill-pill">JWT Authentication</span>
+              <span class="skill-pill">API Integration</span>
+              <span class="skill-pill">Async/Await & Promises</span>
+              <span class="skill-pill">Session Management</span>
+            </div>
+          </div>
+
+          <!-- 3. Programming Languages -->
+          <div class="skill-category-card">
+            <div class="category-header">
+              <div class="category-icon-box">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"></path></svg>
+              </div>
+              <h3 class="category-title">Programming Languages</h3>
+            </div>
+            <div class="skill-pills-list">
+              <span class="skill-pill">Java</span>
+              <span class="skill-pill">JavaScript (ES6+)</span>
+              <span class="skill-pill">C (Core)</span>
+            </div>
+          </div>
+
+          <!-- 4. Databases & ORM -->
+          <div class="skill-category-card">
+            <div class="category-header">
+              <div class="category-icon-box">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+              </div>
+              <h3 class="category-title">Databases & Storage</h3>
+            </div>
+            <div class="skill-pills-list">
+              <span class="skill-pill">MongoDB (MERN)</span>
+              <span class="skill-pill">PostgreSQL</span>
+              <span class="skill-pill">Prisma ORM</span>
+              <span class="skill-pill">MySQL</span>
+              <span class="skill-pill">Schema Design</span>
+              <span class="skill-pill">CRUD Operations</span>
+            </div>
+          </div>
+
+          <!-- 5. Developer Tools & DevOps -->
+          <div class="skill-category-card">
+            <div class="category-header">
+              <div class="category-icon-box">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+              </div>
+              <h3 class="category-title">Tools & Workflows</h3>
+            </div>
+            <div class="skill-pills-list">
+              <span class="skill-pill">Git</span>
+              <span class="skill-pill">GitHub</span>
+              <span class="skill-pill">VS Code</span>
+              <span class="skill-pill">Vite</span>
+              <span class="skill-pill">Postman</span>
+              <span class="skill-pill">Git Branching</span>
+              <span class="skill-pill">Pull Requests</span>
+            </div>
+          </div>
+
+          <!-- 6. Core Concepts & Foundations -->
+          <div class="skill-category-card">
+            <div class="category-header">
+              <div class="category-icon-box">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              </div>
+              <h3 class="category-title">Core Fundamentals</h3>
+            </div>
+            <div class="skill-pills-list">
+              <span class="skill-pill">OOP (Object-Oriented)</span>
+              <span class="skill-pill">Data Structures (Basics)</span>
+              <span class="skill-pill">SDLC</span>
+              <span class="skill-pill">Problem Solving</span>
+              <span class="skill-pill">Code Reviews</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== EXPERIENCE SECTION ==================== -->
+    <section class="section-wrapper" id="experience">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+            Internship Experience
+          </div>
+          <h2 class="section-title">Industry <span class="gradient-text">Experience</span></h2>
+          <p class="section-subtitle">Real-world full-stack development, API integration, and collaborative agile engineering.</p>
+        </div>
+
+        <div class="timeline">
+          <!-- Imagecon Academy Internship Item -->
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="timeline-role">MERN-Stack Intern</h3>
+                  <div class="timeline-company">Imagecon Academy</div>
+                </div>
+                <span class="timeline-period">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                  June 2025 – January 2026 (7 Months)
+                </span>
+              </div>
+
+              <div class="timeline-bullets">
+                <div class="timeline-bullet">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Developed and maintained scalable full-stack web applications using the <strong>MERN stack</strong> (MongoDB, Express.js, React, Node.js).</span>
+                </div>
+                <div class="timeline-bullet">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Built modern, responsive user interfaces and engineered high-performance <strong>REST APIs</strong> ensuring seamless frontend-backend communication.</span>
+                </div>
+                <div class="timeline-bullet">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Implemented secure <strong>JWT authentication</strong>, complete CRUD operations, schema design, and database integration for dynamic production platforms.</span>
+                </div>
+                <div class="timeline-bullet">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Collaborated through disciplined <strong>GitHub workflows</strong>, task tracking, code reviews, and clean coding practices in a professional team environment.</span>
+                </div>
+              </div>
+
+              <div class="timeline-tags">
+                <span class="timeline-tag">MongoDB</span>
+                <span class="timeline-tag">Express.js</span>
+                <span class="timeline-tag">React.js</span>
+                <span class="timeline-tag">Node.js</span>
+                <span class="timeline-tag">REST APIs</span>
+                <span class="timeline-tag">JWT Auth</span>
+                <span class="timeline-tag">Git Workflows</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== PROJECTS SECTION ==================== -->
+    <section class="section-wrapper" id="projects" style="background: var(--bg-secondary);">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+            GitHub Projects & Repositories
+          </div>
+          <h2 class="section-title">Open Source & <span class="gradient-text">Featured Projects</span></h2>
+          <p class="section-subtitle">12 public repositories imported directly from GitHub spanning Full Stack MERN systems, React applications, and developer productivity tools.</p>
+        </div>
+
+        <!-- Category Filter Buttons -->
+        <div style="text-align: center; margin-bottom: 1.5rem;">
+          <div class="github-live-sync-bar" id="github-sync-status">
+            <span class="sync-dot"></span>
+            <span id="github-sync-text">Connecting to GitHub API (@MATHIYAZHAGN21)...</span>
+          </div>
+        </div>
+
+        <div class="projects-filter-bar">
+          <button class="filter-btn active" data-filter="all">All Repositories (12)</button>
+          <button class="filter-btn" data-filter="fullstack">Full Stack & MERN</button>
+          <button class="filter-btn" data-filter="react">React & Modern Web</button>
+          <button class="filter-btn" data-filter="tools">Productivity & Tools</button>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="projects-grid">
+
+          <!-- 1. Compensation Intelligence System -->
+          <div class="project-card" data-category="fullstack">
+            <div class="project-card-header">
+              <div class="project-header-pattern"></div>
+              <span class="project-badge-type">Full Stack Analytics</span>
+              <div class="project-banner-content">
+                <div class="project-banner-icon">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                </div>
+                <h4 style="font-size: 1.1rem; color: #fff;">Compensation Intelligence</h4>
+              </div>
+            </div>
+
+            <div class="project-body">
+              <h3 class="project-title">Compensation Intelligence System</h3>
+              <p class="project-desc">
+                An enterprise-grade salary submission and benchmarking analytics platform enabling employees to analyze market compensation across companies and job tiers.
+              </p>
+
+              <div class="project-highlights-list">
+                <div class="project-highlight-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Total compensation engine factoring base, bonus, & stock equity.</span>
+                </div>
+                <div class="project-highlight-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>PostgreSQL relational queries with Prisma ORM & REST APIs.</span>
+                </div>
+              </div>
+
+              <div class="project-stack">
+                <span class="stack-tag">TypeScript</span>
+                <span class="stack-tag">React</span>
+                <span class="stack-tag">Node.js</span>
+                <span class="stack-tag">PostgreSQL</span>
+                <span class="stack-tag">Prisma ORM</span>
+                <span class="stack-tag">JWT</span>
+              </div>
+
+              <div class="project-actions">
+                <button class="btn btn-primary btn-sm open-project-modal" data-project="compensation" style="flex: 1;">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                  <span>Case Study</span>
+                </button>
+                <a href="https://github.com/MATHIYAZHAGN21/Compensation-intelligence-System" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" title="View Source Code">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                  <span>GitHub</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. UH SkillBridge Peer Mentorship Platform -->
+          <div class="project-card" data-category="fullstack mern">
+            <div class="project-card-header">
+              <div class="project-header-pattern"></div>
+              <span class="project-badge-type">MERN Platform</span>
+              <div class="project-banner-content">
+                <div class="project-banner-icon" style="background: linear-gradient(135deg, #059669, #10b981);">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                </div>
+                <h4 style="font-size: 1.1rem; color: #fff;">UH SkillBridge</h4>
+              </div>
+            </div>
+
+            <div class="project-body">
+              <h3 class="project-title">UH SkillBridge – Mentorship Platform</h3>
+              <p class="project-desc">
+                A scalable peer mentorship platform with weighted scoring matching algorithms, session lifecycle management, and dynamic rating systems.
+              </p>
+
+              <div class="project-highlights-list">
+                <div class="project-highlight-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Intelligent mentor matching system using weighted scoring algorithms.</span>
+                </div>
+                <div class="project-highlight-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Dynamic rating & review engine with running-average calculations.</span>
+                </div>
+              </div>
+
+              <div class="project-stack">
+                <span class="stack-tag">React</span>
+                <span class="stack-tag">Tailwind CSS</span>
+                <span class="stack-tag">Node.js</span>
+                <span class="stack-tag">Express.js</span>
+                <span class="stack-tag">MongoDB</span>
+                <span class="stack-tag">JWT</span>
+              </div>
+
+              <div class="project-actions">
+                <button class="btn btn-primary btn-sm open-project-modal" data-project="skillbridge" style="flex: 1;">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                  <span>Case Study</span>
+                </button>
+                <a href="https://github.com/MATHIYAZHAGN21/UH-SkillBridge" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" title="View Source Code">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                  <span>GitHub</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. VP-Ecommerce Platform (with Razorpay) -->
+          <div class="project-card" data-category="fullstack mern react">
+            <div class="project-card-header">
+              <div class="project-header-pattern"></div>
+              <span class="project-badge-type">MERN + Razorpay</span>
+              <div class="project-banner-content">
+                <div class="project-banner-icon" style="background: linear-gradient(135deg, #7c3aed, #a855f7);">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                </div>
+                <h4 style="font-size: 1.1rem; color: #fff;">VP-E-Commerce</h4>
+              </div>
+            </div>
+
+            <div class="project-body">
+              <h3 class="project-title">VP-Ecommerce Platform (with Razorpay)</h3>
+              <p class="project-desc">
+                A full-featured production e-commerce application built with the MERN stack, secure Razorpay online payment gateway, product management, and order tracking.
+              </p>
+
+              <div class="project-highlights-list">
+                <div class="project-highlight-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Razorpay payment gateway integration with secure checkout verification.</span>
+                </div>
+                <div class="project-highlight-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>User JWT authentication, product catalog CRUD, & admin sales tracking.</span>
+                </div>
+              </div>
+
+              <div class="project-stack">
+                <span class="stack-tag">MongoDB</span>
+                <span class="stack-tag">Express.js</span>
+                <span class="stack-tag">React.js</span>
+                <span class="stack-tag">Node.js</span>
+                <span class="stack-tag">Razorpay</span>
+                <span class="stack-tag">JWT</span>
+              </div>
+
+              <div class="project-actions">
+                <button class="btn btn-primary btn-sm open-project-modal" data-project="ecommerce" style="flex: 1;">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                  <span>Case Study</span>
+                </button>
+                <a href="https://github.com/MATHIYAZHAGN21/VP-E-commerce" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" title="View Source Code">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                  <span>GitHub</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. Expense Tracker (React + Vite + Tailwind) -->
+          <div class="project-card" data-category="react tools">
+            <div class="project-card-header">
+              <div class="project-header-pattern"></div>
+              <span class="project-badge-type">React + Vite</span>
+              <div class="project-banner-content">
+                <div class="project-banner-icon" style="background: linear-gradient(135deg, #0284c7, #38bdf8);">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                </div>
+                <h4 style="font-size: 1.1rem; color: #fff;">Expense Tracker</h4>
+              </div>
+            </div>
+
+            <div class="project-body">
+              <h3 class="project-title">Expense Tracker & Finance Manager</h3>
+              <p class="project-desc">
+                A personal finance management web application engineered with React, Vite, and Tailwind CSS. Features dynamic income/expense logging, category breakdown, and balance calculations.
+              </p>
+
+              <div class="project-highlights-list">
+                <div class="project-highlight-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Real-time income vs expense calculation with category segregation.</span>
+                </div>
+                <div class="project-highlight-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Built with modern React hooks, Vite bundler, and Tailwind CSS.</span>
+                </div>
+              </div>
+
+              <div class="project-stack">
+                <span class="stack-tag">React.js</span>
+                <span class="stack-tag">Vite</span>
+                <span class="stack-tag">Tailwind CSS</span>
+                <span class="stack-tag">LocalStorage</span>
+              </div>
+
+              <div class="project-actions">
+                <button class="btn btn-primary btn-sm open-project-modal" data-project="expensetracker" style="flex: 1;">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                  <span>Case Study</span>
+                </button>
+                <a href="https://github.com/MATHIYAZHAGN21/Expense-Tracker-" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" title="View Source Code">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                  <span>GitHub</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5. Personal Productivity Suite -->
+          <div class="project-card" data-category="tools">
+            <div class="project-card-header">
+              <div class="project-header-pattern"></div>
+              <span class="project-badge-type">Productivity Suite</span>
+              <div class="project-banner-content">
+                <div class="project-banner-icon" style="background: linear-gradient(135deg, #d97706, #fbbf24);">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
+                </div>
+                <h4 style="font-size: 1.1rem; color: #fff;">Productivity Suite</h4>
+              </div>
+            </div>
+
+            <div class="project-body">
+              <h3 class="project-title">Personal Productivity Suite</h3>
+              <p class="project-desc">
+                An all-in-one developer productivity workspace unifying task management, an interactive Pomodoro focus timer, daily goals tracking, and quick note organization.
+              </p>
+
+              <div class="project-highlights-list">
+                <div class="project-highlight-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Customizable Pomodoro timer with work/break interval cycles.</span>
+                </div>
+                <div class="project-highlight-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Instant local storage persistence and clean modular JavaScript architecture.</span>
+                </div>
+              </div>
+
+              <div class="project-stack">
+                <span class="stack-tag">JavaScript (ES6+)</span>
+                <span class="stack-tag">HTML5</span>
+                <span class="stack-tag">CSS3</span>
+                <span class="stack-tag">LocalStorage API</span>
+              </div>
+
+              <div class="project-actions">
+                <button class="btn btn-primary btn-sm open-project-modal" data-project="productivity" style="flex: 1;">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                  <span>Case Study</span>
+                </button>
+                <a href="https://github.com/MATHIYAZHAGN21/Personal-Productivity-suite" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" title="View Source Code">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                  <span>GitHub</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6. Prep-Platform -->
+          <div class="project-card" data-category="tools">
+            <div class="project-card-header">
+              <div class="project-header-pattern"></div>
+              <span class="project-badge-type">Interview Hub</span>
+              <div class="project-banner-content">
+                <div class="project-banner-icon" style="background: linear-gradient(135deg, #4f46e5, #818cf8);">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                </div>
+                <h4 style="font-size: 1.1rem; color: #fff;">Prep-Platform</h4>
+              </div>
+            </div>
+
+            <div class="project-body">
+              <h3 class="project-title">Prep-Platform – Tech Interview Hub</h3>
+              <p class="project-desc">
+                An interactive interview preparation portal designed to help engineering candidates master core computer science fundamentals, DSA problems, and revision roadmaps.
+              </p>
+
+              <div class="project-highlights-list">
+                <div class="project-highlight-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Curated pathways across Data Structures, Algorithms, OOP, & DBMS.</span>
+                </div>
+                <div class="project-highlight-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Interactive self-assessment topic readiness tracker with clean UI.</span>
+                </div>
+              </div>
+
+              <div class="project-stack">
+                <span class="stack-tag">JavaScript</span>
+                <span class="stack-tag">HTML5</span>
+                <span class="stack-tag">CSS3</span>
+                <span class="stack-tag">DSA Foundations</span>
+              </div>
+
+              <div class="project-actions">
+                <button class="btn btn-primary btn-sm open-project-modal" data-project="prepplatform" style="flex: 1;">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                  <span>Case Study</span>
+                </button>
+                <a href="https://github.com/MATHIYAZHAGN21/Perp-Platform" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" title="View Source Code">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                  <span>GitHub</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 7. Fitness & Diet Planner Project -->
+          <div class="project-card" data-category="tools">
+            <div class="project-card-header">
+              <div class="project-header-pattern"></div>
+              <span class="project-badge-type">Health & Wellness</span>
+              <div class="project-banner-content">
+                <div class="project-banner-icon" style="background: linear-gradient(135deg, #e11d48, #f43f5e);">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                </div>
+                <h4 style="font-size: 1.1rem; color: #fff;">Diet & Fitness Planner</h4>
+              </div>
+            </div>
+
+            <div class="project-body">
+              <h3 class="project-title">Fitness & Diet Planner Platform</h3>
+              <p class="project-desc">
+                A personalized health and nutrition planning application that calculates daily caloric targets, macronutrient distributions, and workout regimens.
+              </p>
+
+              <div class="project-highlights-list">
+                <div class="project-highlight-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>BMR & TDEE mathematical estimation based on user metrics.</span>
+                </div>
+                <div class="project-highlight-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Targeted macro split calculations for fitness and weight objectives.</span>
+                </div>
+              </div>
+
+              <div class="project-stack">
+                <span class="stack-tag">JavaScript</span>
+                <span class="stack-tag">HTML5</span>
+                <span class="stack-tag">CSS3</span>
+                <span class="stack-tag">Nutrition Logic</span>
+              </div>
+
+              <div class="project-actions">
+                <button class="btn btn-primary btn-sm open-project-modal" data-project="fitness" style="flex: 1;">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                  <span>Case Study</span>
+                </button>
+                <a href="https://github.com/MATHIYAZHAGN21/Fitness_Diet_Planner_Project" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" title="View Source Code">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                  <span>GitHub</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 8. Mentor Booking Portal -->
+          <div class="project-card" data-category="tools">
+            <div class="project-card-header">
+              <div class="project-header-pattern"></div>
+              <span class="project-badge-type">Booking System</span>
+              <div class="project-banner-content">
+                <div class="project-banner-icon" style="background: linear-gradient(135deg, #0d9488, #14b8a6);">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                </div>
+                <h4 style="font-size: 1.1rem; color: #fff;">Mentor Booking</h4>
+              </div>
+            </div>
+
+            <div class="project-body">
+              <h3 class="project-title">Mentor Booking Portal</h3>
+              <p class="project-desc">
+                A dedicated consultation scheduling system that allows users to discover mentors, browse availability by date and time, and book 1-on-1 mentorship sessions.
+              </p>
+
+              <div class="project-highlights-list">
+                <div class="project-highlight-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Interactive date & time slot selector with validation.</span>
+                </div>
+                <div class="project-highlight-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Instant booking confirmation summary with feedback modals.</span>
+                </div>
+              </div>
+
+              <div class="project-stack">
+                <span class="stack-tag">JavaScript</span>
+                <span class="stack-tag">HTML5</span>
+                <span class="stack-tag">CSS3</span>
+                <span class="stack-tag">DOM State</span>
+              </div>
+
+              <div class="project-actions">
+                <button class="btn btn-primary btn-sm open-project-modal" data-project="mentorbooking" style="flex: 1;">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                  <span>Case Study</span>
+                </button>
+                <a href="https://github.com/MATHIYAZHAGN21/mentor-booking" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" title="View Source Code">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                  <span>GitHub</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 9. Interactive Quiz Application -->
+          <div class="project-card" data-category="tools">
+            <div class="project-card-header">
+              <div class="project-header-pattern"></div>
+              <span class="project-badge-type">Assessment App</span>
+              <div class="project-banner-content">
+                <div class="project-banner-icon" style="background: linear-gradient(135deg, #9333ea, #c084fc);">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+                </div>
+                <h4 style="font-size: 1.1rem; color: #fff;">Interactive Quiz</h4>
+              </div>
+            </div>
+
+            <div class="project-body">
+              <h3 class="project-title">Interactive Quiz Application</h3>
+              <p class="project-desc">
+                A fast-paced interactive quiz application featuring timed questions, immediate color-coded answer validation, dynamic score tallying, and final performance review.
+              </p>
+
+              <div class="project-highlights-list">
+                <div class="project-highlight-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Live countdown timer with automated transition on expiry.</span>
+                </div>
+                <div class="project-highlight-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Immediate score calculation and detailed answers summary.</span>
+                </div>
+              </div>
+
+              <div class="project-stack">
+                <span class="stack-tag">JavaScript</span>
+                <span class="stack-tag">HTML5</span>
+                <span class="stack-tag">CSS3</span>
+                <span class="stack-tag">Timer API</span>
+              </div>
+
+              <div class="project-actions">
+                <button class="btn btn-primary btn-sm open-project-modal" data-project="quiz" style="flex: 1;">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                  <span>Case Study</span>
+                </button>
+                <a href="https://github.com/MATHIYAZHAGN21/quiz" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" title="View Source Code">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                  <span>GitHub</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 10. To-Do List -->
+          <div class="project-card" data-category="tools">
+            <div class="project-card-header">
+              <div class="project-header-pattern"></div>
+              <span class="project-badge-type">Task Utility</span>
+              <div class="project-banner-content">
+                <div class="project-banner-icon" style="background: linear-gradient(135deg, #2563eb, #60a5fa);">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
+                </div>
+                <h4 style="font-size: 1.1rem; color: #fff;">Smart To-Do List</h4>
+              </div>
+            </div>
+
+            <div class="project-body">
+              <h3 class="project-title">Smart Task & To-Do Manager</h3>
+              <p class="project-desc">
+                A streamlined task organizer designed to help developers manage daily sprints, track active and completed work, and persist state across sessions.
+              </p>
+
+              <div class="project-highlights-list">
+                <div class="project-highlight-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Real-time task creation, completion toggling, and bulk clearing.</span>
+                </div>
+                <div class="project-highlight-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Filter by All, Active, and Completed tasks with persistent storage.</span>
+                </div>
+              </div>
+
+              <div class="project-stack">
+                <span class="stack-tag">JavaScript</span>
+                <span class="stack-tag">HTML5</span>
+                <span class="stack-tag">CSS3</span>
+                <span class="stack-tag">LocalStorage</span>
+              </div>
+
+              <div class="project-actions">
+                <button class="btn btn-primary btn-sm open-project-modal" data-project="todolist" style="flex: 1;">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                  <span>Case Study</span>
+                </button>
+                <a href="https://github.com/MATHIYAZHAGN21/To-do-list" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" title="View Source Code">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                  <span>GitHub</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 11. Modern Calculator -->
+          <div class="project-card" data-category="tools">
+            <div class="project-card-header">
+              <div class="project-header-pattern"></div>
+              <span class="project-badge-type">Web Tool</span>
+              <div class="project-banner-content">
+                <div class="project-banner-icon" style="background: linear-gradient(135deg, #059669, #34d399);">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2"></rect><line x1="8" y1="6" x2="16" y2="6"></line><line x1="16" y1="14" x2="16" y2="14.01"></line><line x1="12" y1="14" x2="12" y2="14.01"></line><line x1="8" y1="14" x2="8" y2="14.01"></line><line x1="16" y1="18" x2="16" y2="18.01"></line><line x1="12" y1="18" x2="12" y2="18.01"></line><line x1="8" y1="18" x2="8" y2="18.01"></line></svg>
+                </div>
+                <h4 style="font-size: 1.1rem; color: #fff;">Glass Calculator</h4>
+              </div>
+            </div>
+
+            <div class="project-body">
+              <h3 class="project-title">Modern Glassmorphic Calculator</h3>
+              <p class="project-desc">
+                A responsive calculator built with modern CSS glassmorphism, chained expression evaluation, keyboard shortcut listeners, and overflow protection.
+              </p>
+
+              <div class="project-highlights-list">
+                <div class="project-highlight-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Chained mathematical operations (+, -, *, /) with decimal support.</span>
+                </div>
+                <div class="project-highlight-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Full keyboard event support and sleek glassmorphic aesthetics.</span>
+                </div>
+              </div>
+
+              <div class="project-stack">
+                <span class="stack-tag">HTML5</span>
+                <span class="stack-tag">CSS3 Glassmorphism</span>
+                <span class="stack-tag">JavaScript</span>
+              </div>
+
+              <div class="project-actions">
+                <button class="btn btn-primary btn-sm open-project-modal" data-project="calculator" style="flex: 1;">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                  <span>Case Study</span>
+                </button>
+                <a href="https://github.com/MATHIYAZHAGN21/Modern-Calculator" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" title="View Source Code">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                  <span>GitHub</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 12. Leave Form Portal -->
+          <div class="project-card" data-category="tools">
+            <div class="project-card-header">
+              <div class="project-header-pattern"></div>
+              <span class="project-badge-type">Form Portal</span>
+              <div class="project-banner-content">
+                <div class="project-banner-icon" style="background: linear-gradient(135deg, #c026d3, #e879f9);">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                </div>
+                <h4 style="font-size: 1.1rem; color: #fff;">Leave Portal</h4>
+              </div>
+            </div>
+
+            <div class="project-body">
+              <h3 class="project-title">Leave Application & Management Portal</h3>
+              <p class="project-desc">
+                A formal digital leave requisition system designed for institutional or corporate workflows, with date range validation, reason categorization, and request submission.
+              </p>
+
+              <div class="project-highlights-list">
+                <div class="project-highlight-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Date range validation ensuring logical start and end dates with day calculation.</span>
+                </div>
+                <div class="project-highlight-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Comprehensive input validation and visual submission confirmation.</span>
+                </div>
+              </div>
+
+              <div class="project-stack">
+                <span class="stack-tag">JavaScript</span>
+                <span class="stack-tag">CSS3</span>
+                <span class="stack-tag">HTML5</span>
+                <span class="stack-tag">Validation Logic</span>
+              </div>
+
+              <div class="project-actions">
+                <button class="btn btn-primary btn-sm open-project-modal" data-project="leaveform" style="flex: 1;">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                  <span>Case Study</span>
+                </button>
+                <a href="https://github.com/MATHIYAZHAGN21/Leave-Form" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" title="View Source Code">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                  <span>GitHub</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== ACHIEVEMENTS & CERTIFICATIONS ==================== -->
+    <section class="section-wrapper" id="achievements">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+            Recognition & Impact
+          </div>
+          <h2 class="section-title">Achievements & <span class="gradient-text">Certifications</span></h2>
+          <p class="section-subtitle">Leadership roles, competition victories, and technology badges.</p>
+        </div>
+
+        <div class="achievements-grid">
+          <!-- 1. 1st Prize Symposium -->
+          <div class="achievement-card">
+            <div class="achievement-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+            </div>
+            <h3 class="achievement-title">1st Prize – National Symposium</h3>
+            <p class="achievement-desc">
+              Awarded 1st place in the competitive National Level Technical Symposium (2025) for exceptional technical presentation and problem-solving demonstration.
+            </p>
+            <span class="achievement-badge">Winner • 2025</span>
+          </div>
+
+          <!-- 2. Google Student Ambassador -->
+          <div class="achievement-card ambassador">
+            <div class="achievement-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            </div>
+            <h3 class="achievement-title">Google Student Ambassador</h3>
+            <p class="achievement-desc">
+              Conducted an in-depth Gemini AI awareness and prompt engineering workshop for <strong>50+ students</strong>, teaching generative AI tools and best practices.
+            </p>
+            <span class="achievement-badge" style="background: rgba(59, 130, 246, 0.15); color: var(--accent-blue);">Leadership • AI Mentorship</span>
+          </div>
+
+          <!-- 3. National Hackathon Participation -->
+          <div class="achievement-card">
+            <div class="achievement-icon-box" style="background: rgba(168, 85, 247, 0.15); color: var(--accent-purple);">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+            </div>
+            <h3 class="achievement-title">National Level Hackathon</h3>
+            <p class="achievement-desc">
+              Active participant in intensive 24-48 hour national hackathons, ideating and prototyping functional full-stack web solutions under tight deadlines.
+            </p>
+            <span class="achievement-badge" style="background: rgba(168, 85, 247, 0.15); color: var(--accent-purple);">National Level</span>
+          </div>
+
+          <!-- 4. Google Developers Badges -->
+          <div class="achievement-card badge">
+            <div class="achievement-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+            </div>
+            <h3 class="achievement-title">Google Developers Badges</h3>
+            <p class="achievement-desc">
+              Earned verified Google Developers Badges in <strong>HTML, CSS, and JavaScript</strong> through rigorous practical assessments and curriculum pathways.
+            </p>
+            <span class="achievement-badge" style="background: rgba(16, 185, 129, 0.15); color: var(--accent-emerald);">Verified Badges</span>
+          </div>
+
+          <!-- 5. Java & AI Certification -->
+          <div class="achievement-card">
+            <div class="achievement-icon-box" style="background: rgba(6, 182, 212, 0.15); color: var(--accent-cyan);">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+            </div>
+            <h3 class="achievement-title">Java & AI Foundations</h3>
+            <p class="achievement-desc">
+              Certified in <strong>Java Programming and Introduction to AI Concept</strong>, solidifying object-oriented engineering, data structures, and machine intelligence.
+            </p>
+            <span class="achievement-badge" style="background: rgba(6, 182, 212, 0.15); color: var(--accent-cyan);">Certified</span>
+          </div>
+
+          <!-- 6. Academic Distinction -->
+          <div class="achievement-card">
+            <div class="achievement-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+            </div>
+            <h3 class="achievement-title">B.E. Degree Completed (8.2 CGPA)</h3>
+            <p class="achievement-desc">
+              Graduated with distinction in Computer Science & Engineering from AVS Engineering College, with demonstrated excellence in OOP, algorithms, and full-stack development.
+            </p>
+            <span class="achievement-badge" style="background: rgba(16, 185, 129, 0.15); color: var(--accent-emerald);">Graduated • 8.2 CGPA</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== EDUCATION SECTION ==================== -->
+    <section class="section-wrapper" id="education" style="background: var(--bg-secondary);">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+            Academic Background
+          </div>
+          <h2 class="section-title">Education & <span class="gradient-text">Qualifications</span></h2>
+          <p class="section-subtitle">Academic foundations in Computer Science, engineering principles, and mathematics.</p>
+        </div>
+
+        <div class="education-grid">
+          <!-- College -->
+          <div class="edu-card">
+            <div class="edu-meta">
+              <span class="edu-year">Graduated (2022 – 2026)</span>
+              <span class="edu-grade">CGPA: 8.2 / 10 • Degree Completed</span>
+            </div>
+            <h3 class="edu-degree">Bachelor of Engineering (B.E.) in CSE</h3>
+            <div class="edu-institution">AVS Engineering College, Salem</div>
+            <p class="edu-details">
+              <strong>Status:</strong> Degree Completed | Actively Seeking Full-Time Software Roles<br />
+              <strong>Major:</strong> Computer Science and Engineering<br />
+              <strong>Core Coursework:</strong> Object-Oriented Programming (OOP), Data Structures & Algorithms, Database Management Systems (DBMS), Web Technologies, Software Engineering (SDLC), Computer Networks, Operating Systems.
+            </p>
+          </div>
+
+          <!-- School -->
+          <div class="edu-card">
+            <div class="edu-meta">
+              <span class="edu-year">2020 – 2022</span>
+              <span class="edu-grade">Score: 70%</span>
+            </div>
+            <h3 class="edu-degree">Higher Secondary Certificate (HSC)</h3>
+            <div class="edu-institution">Government Higher Secondary School</div>
+            <p class="edu-details">
+              <strong>Stream:</strong> Science & Mathematics<br />
+              Solid analytical foundation in mathematics, physics, and computer fundamentals, cultivating strong logical and problem-solving reasoning.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CONTACT SECTION ==================== -->
+    <section class="section-wrapper" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            Let's Connect
+          </div>
+          <h2 class="section-title">Get in <span class="gradient-text">Touch</span></h2>
+          <p class="section-subtitle">Have an opening, an interesting project, or want to discuss full-stack engineering? Drop me a line!</p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Left: Contact Details -->
+          <div class="contact-info-panel">
+            <!-- Email -->
+            <div class="contact-card">
+              <div class="contact-card-left">
+                <div class="contact-icon-box">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                </div>
+                <div>
+                  <div class="contact-title">Direct Email</div>
+                  <div class="contact-value">smathiyazhaganmathivishnu@gmail.com</div>
+                </div>
+              </div>
+              <button class="copy-btn" data-copy="smathiyazhaganmathivishnu@gmail.com" title="Copy email address">Copy</button>
+            </div>
+
+            <!-- Phone -->
+            <div class="contact-card">
+              <div class="contact-card-left">
+                <div class="contact-icon-box">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                </div>
+                <div>
+                  <div class="contact-title">Mobile Phone</div>
+                  <div class="contact-value">+91 99943 31036</div>
+                </div>
+              </div>
+              <button class="copy-btn" data-copy="+919994331036" title="Copy phone number">Copy</button>
+            </div>
+
+            <!-- Location -->
+            <div class="contact-card">
+              <div class="contact-card-left">
+                <div class="contact-icon-box">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                </div>
+                <div>
+                  <div class="contact-title">Current Location</div>
+                  <div class="contact-value">Salem, Tamil Nadu, India</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- LinkedIn & GitHub Direct Quick Links -->
+            <div class="contact-card">
+              <div class="contact-card-left">
+                <div class="contact-icon-box">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                </div>
+                <div>
+                  <div class="contact-title">LinkedIn Profile</div>
+                  <div class="contact-value">linkedin.com/in/mathiyazhagan-s-419095298</div>
+                </div>
+              </div>
+              <a href="https://linkedin.com/in/mathiyazhagan-s-419095298" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">Visit</a>
+            </div>
+
+            <div class="contact-card">
+              <div class="contact-card-left">
+                <div class="contact-icon-box">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                </div>
+                <div>
+                  <div class="contact-title">GitHub Profile</div>
+                  <div class="contact-value">github.com/MATHIYAZHAGN21</div>
+                </div>
+              </div>
+              <a href="https://github.com/MATHIYAZHAGN21" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">Visit</a>
+            </div>
+          </div>
+
+          <!-- Right: Interactive Contact Form -->
+          <div class="contact-form-card">
+            <h3 style="font-size: 1.35rem; margin-bottom: 0.5rem;">Send a Direct Message</h3>
+            <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1.5rem;">
+              Fill in the form below and hit send to quickly reach me directly.
+            </p>
+
+            <form id="portfolio-contact-form">
+              <div class="form-group">
+                <label class="form-label" for="contact-name">Your Full Name</label>
+                <input type="text" id="contact-name" class="form-control" placeholder="e.g. John Doe" required />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="contact-email">Your Email Address</label>
+                <input type="email" id="contact-email" class="form-control" placeholder="e.g. john@company.com" required />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="contact-subject">Subject</label>
+                <input type="text" id="contact-subject" class="form-control" placeholder="e.g. Opportunity for Full Stack Engineer" required />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="contact-message">Your Message</label>
+                <textarea id="contact-message" class="form-control" placeholder="Hi Mathiyazhagan, we would love to speak with you regarding..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                <span>Send Message</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+      <!-- ==================== TECH SKILLS SECTION ==================== -->
+    <section id="tech-skills" class="section">
+      <div class="container">
+        <h2 class="section-title">Technical Skills</h2>
+        <p class="section-subtitle">Tools and technologies I use across projects</p>
+        <div class="skills-grid">
+          <div class="skill-card" data-skill="React.js">
+            <h3>React.js</h3>
+            <p>Modern UI library for building dynamic single‑page applications.</p>
+          </div>
+          <div class="skill-card" data-skill="Node.js">
+            <h3>Node.js</h3>
+            <p>Server‑side JavaScript runtime for APIs and full‑stack development.</p>
+          </div>
+          <div class="skill-card" data-skill="Express.js">
+            <h3>Express.js</h3>
+            <p>Lightweight web framework for RESTful services.</p>
+          </div>
+          <div class="skill-card" data-skill="MongoDB">
+            <h3>MongoDB</h3>
+            <p>NoSQL database for flexible data models.</p>
+          </div>
+          <div class="skill-card" data-skill="PostgreSQL">
+            <h3>PostgreSQL</h3>
+            <p>Relational DB for complex queries and transactions.</p>
+          </div>
+          <div class="skill-card" data-skill="Java">
+            <h3>Java</h3>
+            <p>Enterprise‑grade language for backend services.</p>
+          </div>
+          <div class="skill-card" data-skill="HTML5 & CSS3">
+            <h3>HTML5 &amp; CSS3</h3>
+            <p>Semantic markup and modern styling techniques.</p>
+          </div>
+          <div class="skill-card" data-skill="JavaScript (ES6+)">
+            <h3>JavaScript (ES6+)</h3>
+            <p>Core language for interactivity and logic.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== PROJECTS SECTION ==================== -->
+    <section id="projects" class="section">
+      <div class="container">
+        <h2 class="section-title">Featured Projects</h2>
+        <p class="section-subtitle">Real‑world applications I built or contributed to.</p>
+        <div id="projects-grid" class="projects-grid">
+          <!-- Project cards will be injected here by script.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== GITHUB LIVE REPOS SECTION ==================== -->
+    <section id="github-section" class="section">
+      <div class="container">
+        <h2 class="section-title">GitHub Repositories</h2>
+        <p class="section-subtitle" id="github-sync-status">Loading repositories…</p>
+        <div id="github-repos" class="github-repos-grid"></div>
+      </div>
+    </section>
+
+    <!-- ==================== AI ASSISTANT ==================== -->
+    <button id="ai-assistant-toggle" class="ai-toggle" aria-label="Open AI Portfolio Assistant">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 0 0 0 20"></path></svg>
+    </button>
+    <div id="ai-assistant-modal" class="ai-modal" hidden>
+      <div class="ai-modal-content">
+        <button id="ai-close" class="ai-close" aria-label="Close">✕</button>
+        <div class="ai-chat-history" id="ai-chat-history"></div>
+        <form id="ai-chat-form" class="ai-chat-form">
+          <input type="text" id="ai-user-input" placeholder="Ask about my skills, projects, experience…" required />
+          <button type="submit" class="ai-send-btn">Send</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- ==================== CONTACT SECTION ==================== -->
+    <section id="contact" class="section">
+      <div class="container">
+        <h2 class="section-title">Contact Me</h2>
+        <p class="section-subtitle">I’m open to opportunities and collaborations.</p>
+        <form id="contact-form" class="contact-form" action="https://formspree.io/f/your-placeholder-id" method="POST" data-formspree>
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+          <div id="form-status" class="form-status" hidden></div>
+        </form>
+      </div>
+    </section>
+
+</main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <a href="#hero" class="nav-logo">
+        <span class="nav-logo-badge">M</span>
+        <span>Mathiyazhagan S</span>
+      </a>
+
+      <div class="footer-nav">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#achievements">Achievements</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Mathiyazhagan S. All rights reserved. Crafted with clean web standards.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== PROJECT CASE STUDY MODAL ==================== -->
+  <div class="modal-overlay" id="project-modal" role="dialog" aria-modal="true">
+    <div class="modal-container">
+      <div class="modal-header">
+        <div>
+          <span class="section-tag" id="modal-project-badge" style="margin-bottom: 0.35rem;">Full Stack Platform</span>
+          <h3 class="modal-title" id="modal-project-title">Project Title</h3>
+        </div>
+        <button class="modal-close-btn" id="modal-close-btn" aria-label="Close modal">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <h4 style="font-size: 1rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem;">Architecture & Tech Stack</h4>
+        <div id="modal-project-stack" class="project-stack" style="margin-bottom: 1.5rem;"></div>
+
+        <h4 style="font-size: 1rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem;">Executive Overview</h4>
+        <p id="modal-project-overview" style="margin-bottom: 1.5rem; line-height: 1.7; font-size: 0.95rem;"></p>
+
+        <h4 style="font-size: 1rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.75rem;">Key Engineering Implementations</h4>
+        <ul id="modal-project-features" class="resume-bullet-list" style="margin-bottom: 1.5rem;"></ul>
+
+        <h4 style="font-size: 1rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem;">System Architecture Notes</h4>
+        <p id="modal-project-arch" style="margin-bottom: 1.75rem; line-height: 1.7; font-size: 0.95rem; color: var(--text-secondary);"></p>
+
+        <div style="display: flex; gap: 1rem; justify-content: flex-end;">
+          <a id="modal-project-github" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+            <span>View Source on GitHub</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== ATS RESUME MODAL & PRINT VIEW ==================== -->
+  <div class="modal-overlay" id="resume-modal" role="dialog" aria-modal="true">
+    <div class="modal-container resume-modal-container">
+      <div class="modal-header">
+        <h3 class="modal-title">Mathiyazhagan S – Official Resume</h3>
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <button id="resume-print-btn" class="btn btn-primary btn-sm btn-print-action">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+            <span>Print / Save as PDF</span>
+          </button>
+          <button class="modal-close-btn" id="resume-modal-close-btn" aria-label="Close resume">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="modal-body" style="background: #e2e8f0; padding: 1.5rem;">
+        <!-- ATS Styled White Paper -->
+        <div class="resume-paper" id="resume-paper-content">
+          <div class="resume-header">
+            <div class="resume-header-flex">
+              <img src="profile.jpg" alt="Mathiyazhagan S" class="resume-header-photo" />
+              <div class="resume-header-info">
+                <h1 class="resume-name">MATHIYAZHAGAN S</h1>
+                <div class="resume-contact-line" style="justify-content: flex-start;">
+                  <span>Salem, Tamil Nadu</span>
+                  <span>•</span>
+                  <span>+91 99943 31036</span>
+                  <span>•</span>
+                  <span>smathiyazhaganmathivishnu@gmail.com</span>
+                </div>
+                <div class="resume-contact-line" style="justify-content: flex-start; margin-top: 0.25rem;">
+                  <span><strong>LinkedIn:</strong> linkedin.com/in/mathiyazhagan-s-419095298</span>
+                  <span>•</span>
+                  <span><strong>GitHub:</strong> github.com/MATHIYAZHAGN21</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Summary -->
+          <div class="resume-section-title">Professional Summary</div>
+          <p style="font-size: 0.88rem; line-height: 1.6;">
+            B.E. Computer Science Engineering graduate (CGPA: 8.2) with a strong foundation in Java, Object-Oriented Programming (OOP), and Full Stack Web Development. Experienced in building scalable MERN stack applications with REST APIs, authentication, and database integration. Proficient in HTML, CSS, JavaScript, React, Node.js, and MongoDB. Passionate about software development and problem solving, actively seeking an entry-level Software Engineer / Full Stack Developer role. Available to join immediately.
+          </p>
+
+          <!-- Technical Skills -->
+          <div class="resume-section-title">Technical Skills</div>
+          <div style="font-size: 0.88rem; line-height: 1.6;">
+            <p><strong>Programming:</strong> Java, C (Core), JavaScript</p>
+            <p><strong>Frontend:</strong> HTML5, CSS3, React.js, Tailwind CSS, Bootstrap</p>
+            <p><strong>Backend:</strong> Node.js, Express.js, REST APIs, JWT Authentication</p>
+            <p><strong>Database:</strong> MongoDB (CRUD Operations, Schema Design), MySQL, PostgreSQL, Prisma ORM</p>
+            <p><strong>Tools:</strong> Git, GitHub, VS Code, Vite, Postman</p>
+            <p><strong>Core Concepts:</strong> Object-Oriented Programming (OOP), Data Structures (Basics), SDLC, API Integration, Responsive UI, Problem Solving</p>
+            <p><strong>Web Concepts:</strong> DOM Manipulation, Event Handling, Asynchronous Programming (Promises, Async/Await)</p>
+            <p><strong>Version Control:</strong> Git Branching, Commit Management, Pull Requests</p>
+          </div>
+
+          <!-- Internship Experience -->
+          <div class="resume-section-title">Internship Experience</div>
+          <div>
+            <div class="resume-entry-header">
+              <span>Imagecon Academy – MERN-Stack Intern</span>
+              <span>June 2025 – January 2026</span>
+            </div>
+            <ul class="resume-bullet-list">
+              <li>Developed and maintained full-stack web applications using the MERN stack (MongoDB, Express.js, React, Node.js).</li>
+              <li>Built responsive user interfaces and integrated REST APIs for smooth frontend-backend communication.</li>
+              <li>Implemented authentication, CRUD operations, and database integration for dynamic web applications.</li>
+              <li>Collaborated using GitHub workflows, task tracking, and clean coding practices in a team environment.</li>
+            </ul>
+          </div>
+
+          <!-- Projects -->
+          <div class="resume-section-title">Projects</div>
+
+          <div style="margin-bottom: 0.85rem;">
+            <div class="resume-entry-header">
+              <span>Compensation Intelligence System (Full Stack)</span>
+              <span>React, Tailwind, Node.js, Express, PostgreSQL, Prisma ORM, JWT</span>
+            </div>
+            <ul class="resume-bullet-list">
+              <li>Developed a full-stack compensation analytics platform enabling structured salary submission, comparison, and market trend analysis across companies and job levels.</li>
+              <li>Designed and implemented compensation calculation logic for total compensation analysis including base salary, bonus, and stock components.</li>
+              <li>Built secure REST APIs with validation, data normalization, filtering, and company-wise analytics for scalable salary intelligence processing.</li>
+              <li>Developed interactive dashboards and comparison modules to analyze compensation trends, level distributions, and company insights.</li>
+              <li>Implemented authentication, role-based access control, and database integration for secure and efficient data management.</li>
+            </ul>
+          </div>
+
+          <div style="margin-bottom: 0.85rem;">
+            <div class="resume-entry-header">
+              <span>UH SkillBridge – Peer Mentorship Platform (MERN)</span>
+              <span>React, Tailwind CSS, Node.js, Express.js, MongoDB, JWT, REST API</span>
+            </div>
+            <ul class="resume-bullet-list">
+              <li>Developed a scalable full-stack mentorship platform enabling mentor/mentee onboarding, profile management, mentor discovery, and session scheduling.</li>
+              <li>Engineered a Mentor Matching System using weighted scoring algorithms based on skills, domain expertise, career goals, and preferred language.</li>
+              <li>Built and secured RESTful APIs with JWT authentication and role-based authorization for mentors, mentees, and admin operations.</li>
+              <li>Implemented session lifecycle management features including booking, status tracking, mentor notes, and feedback storage using MongoDB.</li>
+              <li>Integrated a dynamic rating and review system that updates mentor performance metrics through running-average calculations after each session.</li>
+              <li>Designed and developed admin dashboard functionalities for user monitoring, account moderation, and misuse prevention.</li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="resume-entry-header">
+              <span>VP-Ecommerce Platform (React)</span>
+              <span>React, JavaScript, HTML, CSS</span>
+            </div>
+            <ul class="resume-bullet-list">
+              <li>Developed a responsive Single Page Application (SPA) for an E-commerce platform to manage product listings, cart operations, and order processing workflows.</li>
+              <li>Implemented dynamic product filtering and category-based search functionality to enhance product discovery and user experience.</li>
+              <li>Built reusable and modular React components for product display, shopping cart, and checkout management.</li>
+              <li>Integrated real-time cart state management for seamless quantity updates, pricing calculations, and order summaries.</li>
+              <li>Optimized frontend performance and ensured responsive design compatibility across desktop and mobile devices.</li>
+            </ul>
+          </div>
+
+          <!-- Education -->
+          <div class="resume-section-title">Education</div>
+          <div style="margin-bottom: 0.4rem;">
+            <div class="resume-entry-header">
+              <span>AVS Engineering College, Salem</span>
+              <span>Degree Completed (2022–2026)</span>
+            </div>
+            <div class="resume-entry-sub">
+              <span>B.E. Computer Science and Engineering</span>
+              <span>CGPA: 8.2 / 10 • Immediate Joiner</span>
+            </div>
+          </div>
+          <div>
+            <div class="resume-entry-header">
+              <span>Government Higher Secondary School</span>
+              <span>2020–2022</span>
+            </div>
+            <div class="resume-entry-sub">
+              <span>HSC</span>
+              <span>Percentage: 70%</span>
+            </div>
+          </div>
+
+          <!-- Achievements & Certifications -->
+          <div class="resume-section-title">Achievements & Certifications</div>
+          <ul class="resume-bullet-list">
+            <li><strong>1st Prize – National Level Symposium (2025)</strong> | National Level Hackathon (Participation)</li>
+            <li><strong>Google Developers Badges</strong> (HTML, CSS, JavaScript)</li>
+            <li><strong>Google Student Ambassador</strong> – Conducted Gemini AI awareness session for 50+ students</li>
+            <li><strong>Certificate:</strong> Java Programming and Introduction to AI Concept</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll To Top Button -->
+  <button id="scroll-top-btn" class="scroll-top-btn" aria-label="Scroll to top">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"></polyline></svg>
+  </button>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+</body>
+</html>
